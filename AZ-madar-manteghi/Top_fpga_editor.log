@@ -1,0 +1,27 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   E:\Az madar\cc
+#Date/Time:
+#:T   Tue Dec 31 08:03:44 2019
+#------------------------------
+	#Reading Top.ncd...
+	#Loading device for application Rf_Device from file '6slx9.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "Top" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -3
+	#Design creation date: 2019.12.31.04.32.25
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+select comp 'dip/shift_3'
+	#comp "dip/shift_3",  site "SLICE_X10Y52",  type = SLICEX  (RPM grid X33Y208)
+	#4
+unselect -all
+	#5
+select comp 'dip/shift_3'
+	#comp "dip/shift_3",  site "SLICE_X10Y52",  type = SLICEX  (RPM grid X33Y208)

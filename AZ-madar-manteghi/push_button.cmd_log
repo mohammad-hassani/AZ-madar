@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {E:/Az madar/cc/push_button.v} -lang verilog -prj cc -o push_button.spl -module push_button -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 push_button.spl {E:/Az madar/cc/push_button.sym} 

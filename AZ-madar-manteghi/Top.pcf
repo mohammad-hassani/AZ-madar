@@ -1,0 +1,127 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Dec 31 10:04:06 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "i_Eth_INT" LOCATE = SITE "P21" LEVEL 1;
+COMP "o_LEDLatch" LOCATE = SITE "P15" LEVEL 1;
+COMP "o_SEGData" LOCATE = SITE "P7" LEVEL 1;
+COMP "o_SEGLatch" LOCATE = SITE "P8" LEVEL 1;
+COMP "o_PSCLK" LOCATE = SITE "P133" LEVEL 1;
+COMP "i_CLK" LOCATE = SITE "P14" LEVEL 1;
+COMP "i_MMC_DO" LOCATE = SITE "P143" LEVEL 1;
+COMP "io_Data<0>" LOCATE = SITE "P56" LEVEL 1;
+COMP "io_Data<1>" LOCATE = SITE "P57" LEVEL 1;
+COMP "io_Data<2>" LOCATE = SITE "P58" LEVEL 1;
+COMP "io_Data<3>" LOCATE = SITE "P59" LEVEL 1;
+COMP "io_Data<4>" LOCATE = SITE "P55" LEVEL 1;
+COMP "io_Data<5>" LOCATE = SITE "P51" LEVEL 1;
+COMP "io_Data<6>" LOCATE = SITE "P50" LEVEL 1;
+COMP "io_Data<7>" LOCATE = SITE "P48" LEVEL 1;
+COMP "i_RXD1" LOCATE = SITE "P9" LEVEL 1;
+COMP "i_RXD2" LOCATE = SITE "P11" LEVEL 1;
+COMP "i_DIPData" LOCATE = SITE "P134" LEVEL 1;
+COMP "io_USB_IFCLK" LOCATE = SITE "P29" LEVEL 1;
+COMP "i_SYS_RESET" LOCATE = SITE "P47" LEVEL 1;
+COMP "io_MuxEthUSB<0>" LOCATE = SITE "P43" LEVEL 1;
+COMP "io_MuxEthUSB<1>" LOCATE = SITE "P41" LEVEL 1;
+COMP "io_MuxEthUSB<2>" LOCATE = SITE "P44" LEVEL 1;
+COMP "io_MuxEthUSB<3>" LOCATE = SITE "P30" LEVEL 1;
+COMP "io_MuxEthUSB<4>" LOCATE = SITE "P45" LEVEL 1;
+COMP "io_MuxEthUSB<5>" LOCATE = SITE "P32" LEVEL 1;
+COMP "io_MuxEthUSB<6>" LOCATE = SITE "P33" LEVEL 1;
+COMP "io_MuxEthUSB<7>" LOCATE = SITE "P34" LEVEL 1;
+COMP "io_MuxEthUSB<8>" LOCATE = SITE "P35" LEVEL 1;
+COMP "io_MuxEthUSB<9>" LOCATE = SITE "P40" LEVEL 1;
+COMP "o_DIPLatch" LOCATE = SITE "P2" LEVEL 1;
+COMP "o_LEDData" LOCATE = SITE "P16" LEVEL 1;
+PIN clk/clkout1_buf_pin<1> = BEL "clk/clkout1_buf" PINNAME O;
+PIN "clk/clkout1_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN
+        im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<26>
+        = BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<27>
+        = BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram"
+        PINNAME CLKBRDCLK;
+TIMEGRP clk_clkout0 = BEL "clk/clkout1_buf" BEL "dip/counter_31" BEL
+        "dip/counter_30" BEL "dip/counter_29" BEL "dip/counter_28" BEL
+        "dip/counter_27" BEL "dip/counter_26" BEL "dip/counter_25" BEL
+        "dip/counter_24" BEL "dip/counter_23" BEL "dip/counter_22" BEL
+        "dip/counter_21" BEL "dip/counter_20" BEL "dip/counter_19" BEL
+        "dip/counter_18" BEL "dip/counter_17" BEL "dip/counter_16" BEL
+        "dip/counter_15" BEL "dip/counter_14" BEL "dip/counter_13" BEL
+        "dip/counter_12" BEL "dip/counter_11" BEL "dip/counter_10" BEL
+        "dip/counter_9" BEL "dip/counter_8" BEL "dip/counter_7" BEL
+        "dip/counter_6" BEL "dip/counter_5" BEL "dip/counter_4" BEL
+        "dip/counter_3" BEL "dip/counter_2" BEL "dip/counter_1" BEL
+        "dip/counter_0" BEL "dip/PB_1" BEL "dip/PB_0" BEL "dip/latch" BEL
+        "dip/shift_19" BEL "led_inst/counter_31" BEL "led_inst/counter_3" BEL
+        "led_inst/counter_2" BEL "led_inst/counter_1" BEL "led_inst/counter_0"
+        BEL "led_inst/data_out" BEL "led_inst/latch" BEL "led_inst/shift_0"
+        BEL "led_inst/shift_3" BEL "led_inst/shift_4" BEL "led_inst/shift_5"
+        BEL "led_inst/shift_6" BEL "led_inst/shift_7" BEL "decoder/ALU_out_7"
+        BEL "decoder/ALU_out_6" BEL "decoder/ALU_out_5" BEL
+        "decoder/ALU_out_4" BEL "decoder/ALU_out_3" BEL "decoder/ALU_out_2"
+        BEL "decoder/ALU_out_1" BEL "decoder/ALU_out_0" BEL
+        "execute/LED_out_7" BEL "execute/LED_out_4" BEL "execute/LED_out_3"
+        BEL "execute/LED_out_2" BEL "execute/LED_out_1" BEL
+        "execute/LED_out_0" BEL "sevensegment/delay_31" BEL
+        "sevensegment/delay_14" BEL "sevensegment/delay_13" BEL
+        "sevensegment/delay_12" BEL "sevensegment/delay_11" BEL
+        "sevensegment/delay_10" BEL "sevensegment/delay_9" BEL
+        "sevensegment/delay_8" BEL "sevensegment/delay_7" BEL
+        "sevensegment/delay_6" BEL "sevensegment/delay_5" BEL
+        "sevensegment/delay_4" BEL "sevensegment/delay_3" BEL
+        "sevensegment/delay_2" BEL "sevensegment/delay_1" BEL
+        "sevensegment/delay_0" BEL "sevensegment/data_out" BEL
+        "sevensegment/select_3" BEL "sevensegment/select_2" BEL
+        "sevensegment/select_1" BEL "sevensegment/select_0" BEL
+        "sevensegment/segselect_6" BEL "sevensegment/segselect_5" BEL
+        "sevensegment/segselect_3" BEL "set/delay_0" BEL "set/delay_1" BEL
+        "set/delay_2" BEL "set/delay_3" BEL "set/delay_4" BEL "set/delay_5"
+        BEL "set/delay_6" BEL "set/delay_7" BEL "set/delay_8" BEL
+        "set/delay_9" BEL "set/delay_10" BEL "set/delay_11" BEL "set/delay_12"
+        BEL "set/delay_13" BEL "set/delay_14" BEL "set/delay_15" BEL
+        "set/delay_16" BEL "set/delay_17" BEL "set/delay_18" BEL
+        "set/delay_19" BEL "set/delay_20" BEL "set/delay_21" BEL
+        "set/delay_22" BEL "set/delay_23" BEL "set/delay_24" BEL
+        "set/delay_25" BEL "set/delay_26" BEL "set/delay_27" BEL
+        "set/delay_28" BEL "set/delay_29" BEL "set/delay_30" BEL
+        "set/delay_31" BEL "set/pc_out_7" BEL "set/pc_out_6" BEL
+        "set/pc_out_5" BEL "set/pc_out_4" BEL "set/pc_out_3" BEL
+        "set/pc_out_2" BEL "set/pc_out_1" BEL "set/pc_out_0" BEL "dip/PB_1_1"
+        BEL "dip/PB_1_2" BEL "dip/PB_0_1" BEL "dip/PB_0_2" PIN
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<26>"
+        PIN
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<27>"
+        BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/douta_i_7"
+        BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/douta_i_6"
+        BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/douta_i_5"
+        BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/douta_i_4"
+        BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/douta_i_3"
+        BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/douta_i_2"
+        BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/douta_i_1"
+        BEL
+        "im/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/douta_i_0"
+        BEL "o_PSCLK";
+PIN SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0> = BEL
+        "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0" PINNAME DIVCLK;
+PIN clk/pll_base_inst/PLL_ADV_pins<2> = BEL "clk/pll_base_inst/PLL_ADV"
+        PINNAME CLKIN1;
+TIMEGRP i_CLK = PIN "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0>" PIN
+        "clk/pll_base_inst/PLL_ADV_pins<2>";
+TS_i_CLK = PERIOD TIMEGRP "i_CLK" 50 MHz HIGH 50%;
+TS_clk_clkout0 = PERIOD TIMEGRP "clk_clkout0" TS_i_CLK * 0.1 HIGH 50%;
+SCHEMATIC END;
+

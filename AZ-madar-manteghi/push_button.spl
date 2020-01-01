@@ -1,0 +1,10 @@
+[Inputs]
+clk
+=PB[4:0]=
+=dip_input[15:0]=
+[Outputs]
+=out[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel push_button
+

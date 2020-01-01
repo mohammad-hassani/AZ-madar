@@ -1,0 +1,814 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\Az madar\cc\ipcore_dir\clock.v" into library work
+Parsing module <clock>.
+Analyzing Verilog file "E:\Az madar\cc\sevensegment.v" into library work
+Parsing module <sevensegment>.
+Analyzing Verilog file "E:\Az madar\cc\set_pc.v" into library work
+Parsing module <set_pc>.
+Analyzing Verilog file "E:\Az madar\cc\reg_bank.v" into library work
+Parsing module <reg_bank>.
+Analyzing Verilog file "E:\Az madar\cc\LED.v" into library work
+Parsing module <LED>.
+Analyzing Verilog file "E:\Az madar\cc\ipcore_dir\IM.v" into library work
+Parsing module <IM>.
+Analyzing Verilog file "E:\Az madar\cc\execute.v" into library work
+Parsing module <execute>.
+Analyzing Verilog file "E:\Az madar\cc\decoder.v" into library work
+Parsing module <decoder>.
+Analyzing Verilog file "E:\Az madar\cc\deap_switch.v" into library work
+Parsing module <dip_switch>.
+Analyzing Verilog file "E:\Az madar\cc\Top.v" into library work
+Parsing module <Top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Top>.
+
+Elaborating module <clock>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=8,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=80,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=20,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=8,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DIVIDE=4,CLKOUT3_PHASE=0.0,CLKOUT3_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "E:\Az madar\cc\ipcore_dir\clock.v" Line 129: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Az madar\cc\ipcore_dir\clock.v" Line 130: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Az madar\cc\ipcore_dir\clock.v" Line 131: Assignment to locked_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "E:\Az madar\cc\Top.v" Line 149: Assignment to clk20 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Az madar\cc\Top.v" Line 150: Assignment to clk50 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Az madar\cc\Top.v" Line 151: Assignment to clk100 ignored, since the identifier is never used
+
+Elaborating module <IM>.
+WARNING:HDLCompiler:1499 - "E:\Az madar\cc\ipcore_dir\IM.v" Line 39: Empty module <IM> remains a black box.
+WARNING:HDLCompiler:189 - "E:\Az madar\cc\Top.v" Line 156: Size mismatch in connection of port <dina>. Formal port size is 16-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\Az madar\cc\Top.v" Line 157: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+Elaborating module <set_pc>.
+WARNING:HDLCompiler:413 - "E:\Az madar\cc\set_pc.v" Line 39: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <LED>.
+WARNING:HDLCompiler:413 - "E:\Az madar\cc\LED.v" Line 36: Result of 16-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <dip_switch>.
+WARNING:HDLCompiler:1127 - "E:\Az madar\cc\Top.v" Line 183: Assignment to out ignored, since the identifier is never used
+
+Elaborating module <decoder>.
+
+Elaborating module <reg_bank>.
+WARNING:HDLCompiler:634 - "E:\Az madar\cc\reg_bank.v" Line 30: Net <temp2[3]> does not have a driver.
+
+Elaborating module <execute>.
+WARNING:HDLCompiler:413 - "E:\Az madar\cc\execute.v" Line 45: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\Az madar\cc\execute.v" Line 46: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <sevensegment>.
+WARNING:HDLCompiler:189 - "E:\Az madar\cc\Top.v" Line 226: Size mismatch in connection of port <data_in>. Formal port size is 16-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "E:\Az madar\cc\Top.v" Line 228: Size mismatch in connection of port <data_out>. Formal port size is 16-bit while actual signal size is 1-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top>.
+    Related source file is "E:\Az madar\cc\Top.v".
+WARNING:Xst:647 - Input <i_Eth_INT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_RXD1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_RXD2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_MMC_DO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SYS_RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\Az madar\cc\Top.v" line 146: Output port <CLK_OUT20> of the instance <clk> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Az madar\cc\Top.v" line 146: Output port <CLK_OUT50> of the instance <clk> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Az madar\cc\Top.v" line 146: Output port <CLK_OUT100> of the instance <clk> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Az madar\cc\Top.v" line 179: Output port <data_out> of the instance <dip> is unconnected or connected to loadless signal.
+Always blocking tristate driving signal <io_USB_IFCLK> is removed.
+Always blocking tristate driving signal <io_Data<7>> is removed.
+Always blocking tristate driving signal <io_Data<6>> is removed.
+Always blocking tristate driving signal <io_Data<5>> is removed.
+Always blocking tristate driving signal <io_Data<4>> is removed.
+Always blocking tristate driving signal <io_Data<3>> is removed.
+Always blocking tristate driving signal <io_Data<2>> is removed.
+Always blocking tristate driving signal <io_Data<1>> is removed.
+Always blocking tristate driving signal <io_Data<0>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<9>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<8>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<7>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<6>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<5>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<4>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<3>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<2>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<1>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<0>> is removed.
+    Found 1-bit tristate buffer for signal <o_MMC_SCK> created at line 80
+    Found 1-bit tristate buffer for signal <o_MMC_DI> created at line 82
+    Found 1-bit tristate buffer for signal <o_MMC_CS> created at line 83
+    Found 1-bit tristate buffer for signal <o_VGA_blue0> created at line 85
+    Found 1-bit tristate buffer for signal <o_VGA_blue1> created at line 86
+    Found 1-bit tristate buffer for signal <o_VGA_green0> created at line 87
+    Found 1-bit tristate buffer for signal <o_VGA_green1> created at line 88
+    Found 1-bit tristate buffer for signal <o_VGA_red0> created at line 89
+    Found 1-bit tristate buffer for signal <o_VGA_red1> created at line 90
+    Found 1-bit tristate buffer for signal <o_VGA_vsync> created at line 91
+    Found 1-bit tristate buffer for signal <o_VGA_hsync> created at line 92
+    Found 1-bit tristate buffer for signal <o_Eth_RST> created at line 94
+    Found 1-bit tristate buffer for signal <o_Eth_CS> created at line 96
+    Found 1-bit tristate buffer for signal <o_Eth_RD> created at line 97
+    Found 1-bit tristate buffer for signal <o_Eth_WR> created at line 98
+    Found 1-bit tristate buffer for signal <o_USB_SLOE> created at line 99
+    Found 1-bit tristate buffer for signal <o_USB_SLRD> created at line 101
+    Found 1-bit tristate buffer for signal <o_USB_SLWR> created at line 102
+    Found 1-bit tristate buffer for signal <o_TXD1> created at line 106
+    Found 1-bit tristate buffer for signal <o_TXD2> created at line 107
+    Found 1-bit tristate buffer for signal <o_LCDData> created at line 114
+    Found 1-bit tristate buffer for signal <o_LCDLatch> created at line 115
+    Summary:
+	inferred  22 Tristate(s).
+Unit <Top> synthesized.
+
+Synthesizing Unit <clock>.
+    Related source file is "E:\Az madar\cc\ipcore_dir\clock.v".
+    Summary:
+	no macro.
+Unit <clock> synthesized.
+
+Synthesizing Unit <set_pc>.
+    Related source file is "E:\Az madar\cc\set_pc.v".
+WARNING:Xst:647 - Input <PB<0:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <delay>.
+    Found 8-bit register for signal <pc_out>.
+    Found 32-bit adder for signal <delay[31]_GND_53_o_add_3_OUT> created at line 34.
+    Found 8-bit adder for signal <pc_in[0]_GND_53_o_add_7_OUT> created at line 39.
+    Found 32-bit comparator lessequal for signal <n0006> created at line 37
+    Found 32-bit comparator lessequal for signal <n0013> created at line 44
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <set_pc> synthesized.
+
+Synthesizing Unit <LED>.
+    Related source file is "E:\Az madar\cc\LED.v".
+    Found 16-bit register for signal <shift>.
+    Found 1-bit register for signal <data_out>.
+    Found 32-bit register for signal <counter>.
+    Found 1-bit register for signal <latch>.
+    Found 32-bit adder for signal <counter[31]_GND_54_o_add_3_OUT> created at line 44.
+    Found 1-bit 16-to-1 multiplexer for signal <counter[3]_shift[15]_Mux_2_o> created at line 42.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <LED> synthesized.
+
+Synthesizing Unit <dip_switch>.
+    Related source file is "E:\Az madar\cc\deap_switch.v".
+    Found 1-bit register for signal <shift<0>>.
+    Found 1-bit register for signal <shift<1>>.
+    Found 1-bit register for signal <shift<2>>.
+    Found 1-bit register for signal <shift<3>>.
+    Found 1-bit register for signal <shift<4>>.
+    Found 1-bit register for signal <shift<5>>.
+    Found 1-bit register for signal <shift<6>>.
+    Found 1-bit register for signal <shift<7>>.
+    Found 1-bit register for signal <shift<8>>.
+    Found 1-bit register for signal <shift<9>>.
+    Found 1-bit register for signal <shift<10>>.
+    Found 1-bit register for signal <shift<11>>.
+    Found 1-bit register for signal <shift<12>>.
+    Found 1-bit register for signal <shift<13>>.
+    Found 1-bit register for signal <shift<14>>.
+    Found 1-bit register for signal <shift<15>>.
+    Found 1-bit register for signal <shift<16>>.
+    Found 1-bit register for signal <shift<17>>.
+    Found 1-bit register for signal <shift<18>>.
+    Found 1-bit register for signal <shift<19>>.
+    Found 16-bit register for signal <data_out>.
+    Found 5-bit register for signal <PB>.
+    Found 32-bit register for signal <counter>.
+    Found 1-bit register for signal <latch>.
+    Found 32-bit adder for signal <counter[31]_GND_55_o_add_5_OUT> created at line 55.
+    Found 32-bit comparator lessequal for signal <n0001> created at line 53
+    Found 32-bit comparator lessequal for signal <n0003> created at line 53
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  74 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <dip_switch> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "E:\Az madar\cc\decoder.v".
+    Found 8-bit register for signal <ALU_out>.
+    Found 4-bit register for signal <op1>.
+    Found 4-bit register for signal <op2>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <decoder> synthesized.
+
+Synthesizing Unit <reg_bank>.
+    Related source file is "E:\Az madar\cc\reg_bank.v".
+WARNING:Xst:647 - Input <op1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <op2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <op2_out> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <temp2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    WARNING:Xst:2404 -  FFs/Latches <op1_out<15:6>> (without init value) have a constant value of 0 in block <reg_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <op1_out<6:4>> (without init value) have a constant value of 1 in block <reg_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <op1_out<4:2>> (without init value) have a constant value of 0 in block <reg_bank>.
+    Summary:
+	no macro.
+Unit <reg_bank> synthesized.
+
+Synthesizing Unit <execute>.
+    Related source file is "E:\Az madar\cc\execute.v".
+    Found 16-bit register for signal <LED_out>.
+    Found 16-bit subtractor for signal <op1_in[15]_op2_in[15]_sub_3_OUT> created at line 44.
+    Found 16-bit adder for signal <op1_in[15]_op2_in[15]_add_1_OUT> created at line 43.
+    Found 16-bit adder for signal <op1_in[15]_GND_58_o_add_3_OUT> created at line 45.
+    Found 16-bit subtractor for signal <GND_58_o_GND_58_o_sub_5_OUT<15:0>> created at line 46.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <execute> synthesized.
+
+Synthesizing Unit <sevensegment>.
+    Related source file is "E:\Az madar\cc\sevensegment.v".
+WARNING:Xst:647 - Input <data_in<15:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <select>.
+    Found 8-bit register for signal <segselect>.
+    Found 32-bit register for signal <delay>.
+    Found 1-bit register for signal <latch>.
+    Found 32-bit register for signal <counter>.
+    Found 1-bit register for signal <data_out>.
+    Found 32-bit adder for signal <counter[31]_GND_59_o_add_20_OUT> created at line 109.
+    Found 32-bit adder for signal <delay[31]_GND_59_o_add_25_OUT> created at line 122.
+    Found 1-bit 16-to-1 multiplexer for signal <counter[3]_delay[31]_Mux_19_o> created at line 108.
+    Found 32-bit comparator greater for signal <delay[31]_GND_59_o_LessThan_15_o> created at line 70
+    WARNING:Xst:2404 -  FFs/Latches <data_out<15:1>> (without init value) have a constant value of 0 in block <sevensegment>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  78 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <sevensegment> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 10
+ 16-bit adder                                          : 2
+ 16-bit subtractor                                     : 2
+ 32-bit adder                                          : 5
+ 8-bit adder                                           : 1
+# Registers                                            : 40
+ 1-bit register                                        : 25
+ 16-bit register                                       : 3
+ 32-bit register                                       : 5
+ 4-bit register                                        : 3
+ 5-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 5
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 4
+# Multiplexers                                         : 7
+ 1-bit 16-to-1 multiplexer                             : 2
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 1
+# Tristates                                            : 22
+ 1-bit tristate buffer                                 : 22
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/IM.ngc>.
+Loading core <IM> for timing and area information for instance <im>.
+WARNING:Xst:1710 - FF/Latch <segselect_0> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segselect_1> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segselect_2> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segselect_4> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segselect_7> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <shift_18> of sequential type is unconnected in block <dip>.
+WARNING:Xst:2677 - Node <shift_16> of sequential type is unconnected in block <dip>.
+WARNING:Xst:2677 - Node <shift_17> of sequential type is unconnected in block <dip>.
+WARNING:Xst:2677 - Node <PB_2> of sequential type is unconnected in block <dip>.
+WARNING:Xst:2677 - Node <PB_3> of sequential type is unconnected in block <dip>.
+WARNING:Xst:2677 - Node <PB_4> of sequential type is unconnected in block <dip>.
+
+Synthesizing (advanced) Unit <LED>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <LED> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Top>.
+The following registers are absorbed into counter <set/pc_out>: 1 register on signal <set/pc_out>.
+Unit <Top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dip_switch>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <dip_switch> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sevensegment>.
+The following registers are absorbed into counter <delay>: 1 register on signal <delay>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <sevensegment> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 2
+ 16-bit subtractor                                     : 2
+ 32-bit adder                                          : 1
+# Counters                                             : 5
+ 32-bit up counter                                     : 4
+ 8-bit up counter                                      : 1
+# Registers                                            : 138
+ Flip-Flops                                            : 138
+# Comparators                                          : 5
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 4
+# Multiplexers                                         : 37
+ 1-bit 16-to-1 multiplexer                             : 2
+ 1-bit 2-to-1 multiplexer                              : 33
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <segselect_0> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <segselect_1> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <segselect_2> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <segselect_4> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <segselect_7> (without init value) has a constant value of 0 in block <sevensegment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_out_6> (without init value) has a constant value of 0 in block <execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_out_8> (without init value) has a constant value of 0 in block <execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_out_10> (without init value) has a constant value of 0 in block <execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_out_12> (without init value) has a constant value of 0 in block <execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_out_14> (without init value) has a constant value of 0 in block <execute>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance clk/pll_base_inst in unit clk/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <LED_out_7> in Unit <execute> is equivalent to the following 4 FFs/Latches, which will be removed : <LED_out_9> <LED_out_11> <LED_out_13> <LED_out_15> 
+
+Optimizing unit <decoder> ...
+
+Optimizing unit <Top> ...
+
+Optimizing unit <dip_switch> ...
+
+Optimizing unit <LED> ...
+
+Optimizing unit <execute> ...
+WARNING:Xst:1710 - FF/Latch <LED_out_5> (without init value) has a constant value of 1 in block <execute>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_out_5> (without init value) has a constant value of 1 in block <execute>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <sevensegment> ...
+WARNING:Xst:1710 - FF/Latch <led_inst/shift_1> (without init value) has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_inst/shift_2> (without init value) has a constant value of 1 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_inst/shift_9> (without init value) has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_inst/shift_11> (without init value) has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_inst/shift_13> (without init value) has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_inst/shift_15> (without init value) has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <dip/PB_4> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/PB_3> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/PB_2> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_15> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_14> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_13> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_12> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_11> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_10> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_9> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_8> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_7> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_6> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_5> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_4> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_3> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_2> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_1> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/data_out_0> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_18> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_17> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_16> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_15> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_14> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_13> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_11> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_10> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_12> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_8> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_7> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_9> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_5> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_4> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_6> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_3> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_2> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_1> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <dip/shift_0> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <decoder/op1_3> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <decoder/op1_2> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <decoder/op1_1> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <decoder/op1_0> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <decoder/op2_3> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <decoder/op2_2> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <decoder/op2_1> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <decoder/op2_0> of sequential type is unconnected in block <Top>.
+INFO:Xst:2261 - The FF/Latch <sevensegment/delay_31> in Unit <Top> is equivalent to the following 16 FFs/Latches, which will be removed : <sevensegment/delay_30> <sevensegment/delay_29> <sevensegment/delay_28> <sevensegment/delay_27> <sevensegment/delay_26> <sevensegment/delay_25> <sevensegment/delay_24> <sevensegment/delay_23> <sevensegment/delay_22> <sevensegment/delay_21> <sevensegment/delay_20> <sevensegment/delay_19> <sevensegment/delay_18> <sevensegment/delay_17> <sevensegment/delay_16> <sevensegment/delay_15> 
+INFO:Xst:2261 - The FF/Latch <led_inst/counter_31> in Unit <Top> is equivalent to the following 55 FFs/Latches, which will be removed : <led_inst/counter_30> <led_inst/counter_29> <led_inst/counter_28> <led_inst/counter_27> <led_inst/counter_26> <led_inst/counter_25> <led_inst/counter_24> <led_inst/counter_23> <led_inst/counter_22> <led_inst/counter_21> <led_inst/counter_20> <led_inst/counter_19> <led_inst/counter_18> <led_inst/counter_17> <led_inst/counter_16> <led_inst/counter_15> <led_inst/counter_14> <led_inst/counter_13> <led_inst/counter_12> <led_inst/counter_11> <led_inst/counter_10> <led_inst/counter_9> <led_inst/counter_8> <led_inst/counter_7> <led_inst/counter_6> <led_inst/counter_5> <led_inst/counter_4> <sevensegment/counter_31> <sevensegment/counter_30> <sevensegment/counter_29> <sevensegment/counter_28> <sevensegment/counter_27> <sevensegment/counter_26> <sevensegment/counter_25> <sevensegment/counter_24> <sevensegment/counter_23> <sevensegment/counter_22> <sevensegment/counter_21>
+   <sevensegment/counter_20> <sevensegment/counter_19> <sevensegment/counter_18> <sevensegment/counter_17> <sevensegment/counter_16> <sevensegment/counter_15> <sevensegment/counter_14> <sevensegment/counter_13> <sevensegment/counter_12> <sevensegment/counter_11> <sevensegment/counter_10> <sevensegment/counter_9> <sevensegment/counter_8> <sevensegment/counter_7> <sevensegment/counter_6> <sevensegment/counter_5> <sevensegment/counter_4> 
+INFO:Xst:2261 - The FF/Latch <led_inst/latch> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <sevensegment/latch> 
+INFO:Xst:2261 - The FF/Latch <led_inst/shift_0> in Unit <Top> is equivalent to the following 4 FFs/Latches, which will be removed : <led_inst/shift_8> <led_inst/shift_10> <led_inst/shift_12> <led_inst/shift_14> 
+INFO:Xst:2261 - The FF/Latch <led_inst/counter_0> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <sevensegment/counter_0> 
+INFO:Xst:2261 - The FF/Latch <led_inst/counter_1> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <sevensegment/counter_1> 
+INFO:Xst:2261 - The FF/Latch <led_inst/counter_2> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <sevensegment/counter_2> 
+INFO:Xst:2261 - The FF/Latch <led_inst/counter_3> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <sevensegment/counter_3> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 5.
+FlipFlop dip/PB_0 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop dip/PB_0 connected to a primary input has been replicated
+FlipFlop dip/PB_1 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 131
+ Flip-Flops                                            : 131
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 575
+#      GND                         : 2
+#      INV                         : 9
+#      LUT1                        : 100
+#      LUT2                        : 42
+#      LUT3                        : 4
+#      LUT4                        : 36
+#      LUT5                        : 53
+#      LUT6                        : 69
+#      MUXCY                       : 161
+#      MUXF7                       : 3
+#      MUXF8                       : 1
+#      VCC                         : 2
+#      XORCY                       : 93
+# FlipFlops/Latches                : 147
+#      FD                          : 79
+#      FDE                         : 13
+#      FDR                         : 39
+#      FDRE                        : 16
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 30
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 6
+#      OBUFT                       : 22
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             147  out of  11440     1%  
+ Number of Slice LUTs:                  313  out of   5720     5%  
+    Number used as Logic:               313  out of   5720     5%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    347
+   Number with an unused Flip Flop:     200  out of    347    57%  
+   Number with an unused LUT:            34  out of    347     9%  
+   Number of fully used LUT-FF pairs:   113  out of    347    32%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          58
+ Number of bonded IOBs:                  30  out of    102    29%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk/pll_base_inst/CLKOUT0          | BUFG                   | 148   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.334ns (Maximum Frequency: 107.137MHz)
+   Minimum input arrival time before clock: 2.007ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk/pll_base_inst/CLKOUT0'
+  Clock period: 9.334ns (frequency: 107.137MHz)
+  Total number of paths / destination ports: 2074724 / 209
+-------------------------------------------------------------------------
+Delay:               9.334ns (Levels of Logic = 44)
+  Source:            set/delay_0 (FF)
+  Destination:       set/delay_0 (FF)
+  Source Clock:      clk/pll_base_inst/CLKOUT0 rising
+  Destination Clock: clk/pll_base_inst/CLKOUT0 rising
+
+  Data Path: set/delay_0 to set/delay_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  set/delay_0 (set/delay_0)
+     INV:I->O              1   0.206   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_lut<0>_INV_0 (set/Madd_delay[31]_GND_53_o_add_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<0> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<1> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<2> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<3> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<4> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<5> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<6> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<7> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<8> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<9> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<10> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<11> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<12> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<13> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<14> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<15> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<16> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<17> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<18> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<19> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<20> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<21> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<22> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<23> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<24> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<25> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<26> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<27> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<28> (set/Madd_delay[31]_GND_53_o_add_3_OUT_cy<28>)
+     XORCY:CI->O           3   0.180   0.651  set/Madd_delay[31]_GND_53_o_add_3_OUT_xor<29> (set/delay[31]_GND_53_o_add_3_OUT<29>)
+     LUT4:I3->O            2   0.205   0.961  mux101111 (set/delay[31]_delay[31]_mux_4_OUT<29>)
+     LUT5:I0->O            0   0.203   0.000  set/Mcompar_delay[31]_GND_53_o_LessThan_7_o_lutdi3 (set/Mcompar_delay[31]_GND_53_o_LessThan_7_o_lutdi3)
+     MUXCY:DI->O           1   0.145   0.000  set/Mcompar_delay[31]_GND_53_o_LessThan_7_o_cy<4> (set/Mcompar_delay[31]_GND_53_o_LessThan_7_o_cy<4>)
+     MUXCY:CI->O          65   0.019   1.647  set/Mcompar_delay[31]_GND_53_o_LessThan_7_o_cy<5> (set/delay[31]_GND_53_o_LessThan_7_o)
+     LUT5:I4->O            2   0.205   0.961  set/Mmux_delay[31]_GND_53_o_mux_10_OUT291 (set/delay[31]_GND_53_o_mux_10_OUT<6>)
+     LUT5:I0->O            1   0.203   0.000  set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_lut<0> (set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<0> (set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<1> (set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<2> (set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<3> (set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<4> (set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<4>)
+     MUXCY:CI->O          40   0.019   1.406  set/Mcompar_delay[31]_GND_53_o_LessThan_13_o_cy<5> (set/delay[31]_GND_53_o_LessThan_13_o)
+     LUT6:I5->O            1   0.205   0.000  set/pc_out_6_rstpot (set/pc_out_6_rstpot)
+     FD:D                      0.102          set/pc_out_6
+    ----------------------------------------
+    Total                      9.334ns (3.091ns logic, 6.243ns route)
+                                       (33.1% logic, 66.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              2.007ns (Levels of Logic = 1)
+  Source:            i_DIPData (PAD)
+  Destination:       dip/PB_0 (FF)
+  Destination Clock: clk/pll_base_inst/CLKOUT0 rising
+
+  Data Path: i_DIPData to dip/PB_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.683  i_DIPData_IBUF (i_DIPData_IBUF)
+     FDE:D                     0.102          dip/shift_19
+    ----------------------------------------
+    Total                      2.007ns (1.324ns logic, 0.683ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            led_inst/latch (FF)
+  Destination:       o_LEDLatch (PAD)
+  Source Clock:      clk/pll_base_inst/CLKOUT0 rising
+
+  Data Path: led_inst/latch to o_LEDLatch
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  led_inst/latch (led_inst/latch)
+     OBUF:I->O                 2.571          o_LEDLatch_OBUF (o_LEDLatch)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk/pll_base_inst/CLKOUT0
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+clk/pll_base_inst/CLKOUT0|    9.334|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.06 secs
+ 
+--> 
+
+Total memory usage is 4525244 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  111 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+

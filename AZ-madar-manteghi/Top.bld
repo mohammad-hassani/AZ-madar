@@ -1,0 +1,62 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc E:/Az
+madar/CALab/first.ucf -p xc6slx9-tqg144-3 Top.ngc Top.ngd
+
+Reading NGO file "E:/Az madar/cc/Top.ngc" ...
+Loading design module "ipcore_dir/IM.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "E:/Az madar/CALab/first.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'i_CLK', used in period specification
+   'TS_i_CLK', was traced into PLL_ADV instance PLL_ADV. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clk_clkout0 = PERIOD "clk_clkout0" TS_i_CLK * 0.1 HIGH
+   50%>
+
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:470 - bidirect pad net 'io_Data<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_Data<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_Data<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_Data<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_Data<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_Data<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_Data<1>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_Data<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<9>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<8>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<1>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_MuxEthUSB<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'io_USB_IFCLK' has no legal driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  19
+
+Total memory usage is 4420348 kilobytes
+
+Writing NGD file "Top.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "Top.bld"...
