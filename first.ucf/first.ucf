@@ -1,0 +1,74 @@
+
+NET i_CLK 		LOC = P14;
+NET o_PSCLK		LOC = P133;
+
+NET o_LEDData	LOC = P16;
+NET o_LEDLatch	LOC = P15;
+
+NET o_DIPLatch	LOC = P2;
+NET i_DIPData	LOC = P134;
+
+NET o_SEGData	LOC = P7;
+NET o_SEGLatch	LOC = P8;
+
+NET o_LCDData	LOC = P5;
+NET o_LCDLatch	LOC = P6;
+
+NET o_Eth_RST	LOC = P17;
+NET i_Eth_INT	LOC = P21;
+NET o_Eth_CS	LOC = P22;
+NET o_Eth_RD	LOC = P23;
+NET o_Eth_WR	LOC = P24;
+
+NET o_USB_SLWR		LOC = P27;
+NET o_USB_SLRD		LOC = P26;
+NET io_USB_IFCLK	LOC = P29;
+
+NET o_USB_SLOE	LOC = P46;
+NET i_SYS_RESET	LOC = P47;
+
+NET io_Data[0]	LOC = P56;
+NET io_Data[1]	LOC = P57;
+NET io_Data[2]	LOC = P58;
+NET io_Data[3]	LOC = P59;
+NET io_Data[4]	LOC = P55;
+NET io_Data[5]	LOC = P51;
+NET io_Data[6]	LOC = P50;
+NET io_Data[7]	LOC = P48;
+
+NET io_MuxEthUSB[0]	LOC = P43;
+NET io_MuxEthUSB[1]	LOC = P41;
+NET io_MuxEthUSB[2]	LOC = P44;
+NET io_MuxEthUSB[3]	LOC = P30;
+NET io_MuxEthUSB[4]	LOC = P45;
+NET io_MuxEthUSB[5]	LOC = P32;
+NET io_MuxEthUSB[6]	LOC = P33;
+NET io_MuxEthUSB[7]	LOC = P34;
+NET io_MuxEthUSB[8]	LOC = P35;
+NET io_MuxEthUSB[9]	LOC = P40;
+
+NET "o_TXD1" LOC = P10;
+NET "i_RXD1" LOC = P9;
+
+NET "o_TXD2" LOC = P12;
+NET "i_RXD2" LOC = P11;
+
+NET "o_VGA_blue0" LOC = P1;
+NET "o_VGA_blue1" LOC = P140;
+NET "o_VGA_green0" LOC = P139;
+NET "o_VGA_green1" LOC = P138;
+NET "o_VGA_red0" LOC = P137;
+NET "o_VGA_red1" LOC = P132;
+NET "o_VGA_vsync" LOC = P127;
+NET "o_VGA_hsync" LOC = P131;
+
+NET "o_MMC_SCK" LOC = P144;
+NET "i_MMC_DO" LOC = P143;
+NET "o_MMC_DI" LOC = P142;
+NET "o_MMC_CS" LOC = P141;
+
+PIN "clk/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "clk/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "i_CLK" TNM_NET = i_CLK;
+TIMESPEC TS_i_CLK = PERIOD "i_CLK" 50 MHz HIGH 50%;
