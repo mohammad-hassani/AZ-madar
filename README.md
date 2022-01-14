@@ -1,6 +1,6 @@
 # AZ-madar-manteghi
 verilog
-this is a project whit verilog in "ISE design suite 14.7"
+this is a project with verilog in "ISE design suite 14.7"
 the FPGA model is : xc6sslx9-3tqg144
 
 
